@@ -1,0 +1,109 @@
+body {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+/* New York */
+h4 {
+  color: #2b4353;
+  display: inline-block;
+  font-size: 60px;
+  padding: 5px;
+}
+/* Date, time, and details */
+h5 {
+  color: #2b4353;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 0px 30px 50px;
+}
+
+/* 30 - Big temp*/
+h6 {
+  bottom: 90px;
+  color: #e8630a;
+  display: block;
+  font-size: 70px;
+  position: absolute;
+  right: 350px;
+  text-align: right;
+}
+
+footer {
+  padding: 15px;
+  text-align: center;
+}
+/* Current Location button */
+.btn-light-current {
+  display: inline-block;
+  margin: 0 33px;
+  position: relative;
+  background-color: #2b4353;
+  color: white;
+  padding: 7px 12px;
+  border: transparent;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 220ms ease-in-out;
+}
+/* Search button */
+.btn-light-search {
+  background-color: #2b4353;
+  border: transparent;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  display: inline-block;
+  font-size: 17px;
+  margin: 0 5px;
+  margin-right: 0;
+  padding: 9px 13px;
+  position: relative;
+  transition: all 220ms ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.88;
+}
+/* Days of the week cards */
+.card {
+  text-align: center;
+  padding: 5px 10px;
+  margin: 18px;
+  font-size: 22px;
+  color: #2b4353;
+}
+/* Days of the week name*/
+.card-title {
+  color: #e8630a;
+  font-size: 24px;
+  padding-bottom: 4px;
+}
+/* Everything in body*/
+.container {
+  width: 90%;
+  height: 100%;
+  padding-top: 25px;
+  padding-bottom: 220px;
+}
+/* Bar where you search city */
+.form-group {
+  display: block;
+  margin-left: 0;
+  position: relative;
+  top: 6px;
+}
+
+.today-weather {
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 70px;
+  position: relative;
+  top: 40px;
+  bottom: 20px;
+  left: 100px;
+}
+/* Celsius & Fahrenheit next to temp */
+.units {
+  font-size: 20px;
+  color: #e8630a;
+  text-decoration: none;
+}

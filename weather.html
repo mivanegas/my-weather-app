@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!--Bootsrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!--HTML link to CSS-->
+    <link rel="stylesheet" href="../wk 6 hw/src/style.css" />
+    <!--FontAwesome Connector-->
+    <script
+      src="https://kit.fontawesome.com/457602dfdb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="city-form">
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-light-search"
+                id="your-location-button"
+              >
+                Current Location
+              </button>
+            </div>
+            <!--col-btn -->
+            <div class="col-7">
+              <input
+                type="text"
+                class="form-control"
+                id="search-bar"
+                aria-describedby="emailHelp"
+                placeholder="Enter a city..."
+                autofocus="on"
+                autocomplete="off"
+              />
+            </div>
+            <!--col-7 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-light-search col"
+                id="search-city-button"
+              >
+                Search
+              </button>
+            </div>
+            <!--col-btn -->
+          </div>
+          <!--row -->
+        </div>
+        <!--form-group-->
+      </form>
+
+      <span class="today-weather">
+        <h4 id="city-header">New York</h4>
+        <h5 id="weather-details">
+          <span id="day-time">Monday 1:00pm</span>
+          <br />
+          <span id="description">light rain</span>
+          <br />
+          <span id="humidity">humidity: 70% </span>
+          <br />
+          <span id="wind-speed">wind: 10.73 km/h</span>
+        </h5>
+        <h6 id="main-temperature">
+          <i class="fa-solid fa-cloud-rain"></i>
+          30
+          <span class="units">°C | °F</span>
+        </h6>
+      </span>
+      <!--today-weather-->
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tue</h5>
+              <i class="fa-solid fa-cloud-rain"></i>
+              <p class="card-text">13°F</p>
+            </div>
+            <!--card-body-->
+          </div>
+          <!--card--->
+        </div>
+        <!--col--->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Wed</h5>
+              <i class="fa-solid fa-rainbow"></i>
+              <p class="card-text">16°F</p>
+            </div>
+            <!--card-body-->
+          </div>
+          <!--card--->
+        </div>
+        <!--col--->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Thu</h5>
+              <i class="fa-solid fa-cloud-moon-rain"></i>
+              <p class="card-text">45°F</p>
+            </div>
+            <!--card-body-->
+          </div>
+          <!--card--->
+        </div>
+        <!--col--->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Fri</h5>
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+              <p class="card-text">50°F</p>
+            </div>
+            <!--card-body-->
+          </div>
+          <!--card--->
+        </div>
+        <!--col--->
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Sat</h5>
+              <i class="fa-solid fa-snowflake"></i>
+              <p class="card-text">33°F</p>
+            </div>
+            <!--card-body-->
+          </div>
+          <!--card--->
+        </div>
+        <!--col--->
+      </div>
+      <!--row--->
+      <hr />
+      <footer>
+        <em> Coded by Maria Vanegas and is open-sourced on Github</em>
+      </footer>
+    </div>
+    <!--container--->
+    <script src="../wk 6 hw/src/script.js"></script>
+  </body>
+</html>
