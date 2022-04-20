@@ -40,7 +40,6 @@ function formatDate(date) {
   let formattedDate = `${day} | ${month} ${dayNumber}, ${year} | ${hour}:${minute}`;
   return formattedDate;
 }
-
 let dayTime = document.querySelector("#day-time");
 dayTime.innerHTML = formatDate(now);
 
