@@ -29,6 +29,8 @@ dayTime.innerHTML = formatDate(now);
 
 //Changing weather details with city searched
 function showTemperature(response) {
+  document.querySelector("#city-header").innerHTML = response.data.name;
+
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#main-temperature");
   temperatureElement.innerHTML = `${temperature}°C`;
@@ -49,10 +51,10 @@ function showTemperature(response) {
 //Weather API
 function searchCitySubmit(event) {
   event.preventDefault();
-  let cityElement = document.querySelector("#city-header");
-  let searchInput = document.querySelector("#search-bar");
-  cityElement.innerHTML = searchInput.value;
-  let city = searchInput.value;
+
+  let city = document.querySelector("#search-bar").value;
+  //cityElement.innerHTML = searchInput.value;
+  //let city = searchInput.value;
   let units = "metric";
   let apiKey = "89580641dc83acaa98e3dfb8c0563516";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
