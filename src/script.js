@@ -19,8 +19,25 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let dayNumber = date.getDate();
+  let year = date.getFullYear();
 
-  let formattedDate = `${day} | ${hour}:${minute}`;
+  let formattedDate = `${day} | ${month} ${dayNumber}, ${year} | ${hour}:${minute}`;
   return formattedDate;
 }
 
