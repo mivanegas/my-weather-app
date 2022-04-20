@@ -81,10 +81,11 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
 
-let searchForm = document.querySelector("#search-bar");
-searchForm.addEventListener("submit", searchCitySubmit);
-
 let currentLocationButton = document.querySelector("#your-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+//Default city
+let searchForm = document.querySelector("#search-bar");
+searchForm.addEventListener("submit", searchCitySubmit);
 
 setDefaultCity("San Francisco");
