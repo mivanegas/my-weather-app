@@ -47,18 +47,18 @@ function showTemperature(response) {
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = `wind: ${wind} km/h`;
 }
-
-//Weather API
-function searchCitySubmit(event) {
-  event.preventDefault();
-
-  let city = document.querySelector("#search-bar").value;
-  //cityElement.innerHTML = searchInput.value;
-  //let city = searchInput.value;
+//Setting default city
+function setDefaultCity(city) {
   let units = "metric";
   let apiKey = "89580641dc83acaa98e3dfb8c0563516";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
+}
+//Weather API
+function searchCitySubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-bar").value;
+  setDefaultCity(city);
 }
 
 //Geolocation API
@@ -80,5 +80,11 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocation);
 }
+
+let searchForm = document.querySelector("#search-bar");
+searchForm.addEventListener("submit", searchCitySubmit);
+
 let currentLocationButton = document.querySelector("#your-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+setDefaultCity("San Francisco");
