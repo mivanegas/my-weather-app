@@ -31,11 +31,12 @@ h6 {
 img {
   bottom: 90px;
   position: absolute;
-  right: 250px;
+  right: 240px;
   text-align: right;
   margin: 0 auto;
   display: block;
   float: right;
+  font-size: 80px;
 }
 
 footer {
