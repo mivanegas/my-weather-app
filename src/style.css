@@ -24,18 +24,17 @@ h6 {
   display: block;
   font-size: 70px;
   position: absolute;
-  right: 350px;
+  right: 335px;
   text-align: right;
 }
 
 img {
   bottom: 90px;
   position: absolute;
-  right: 240px;
+  right: 420px;
   text-align: right;
   margin: 0 auto;
   display: block;
-  float: right;
   font-size: 80px;
 }
 
@@ -120,8 +119,15 @@ button:hover {
 
 /* Celsius & Fahrenheit next to temp */
 .units {
-  font-size: 20px;
+  bottom: 120px;
+  position: absolute;
+  right: 255px;
+  font-size: 25px;
   color: #e8630a;
+  text-decoration: none;
+}
+
+a:link {
   text-decoration: none;
 }
 

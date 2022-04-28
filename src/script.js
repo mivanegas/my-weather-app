@@ -49,7 +49,7 @@ function showTemperature(response) {
 
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#main-temperature");
-  temperatureElement.innerHTML = `${temperature}°C`;
+  temperatureElement.innerHTML = temperature;
 
   let description = response.data.weather[0].description;
   let descriptionElement = document.querySelector("#description");
@@ -113,3 +113,11 @@ let searchForm = document.querySelector("#search-bar");
 searchForm.addEventListener("submit", searchCitySubmit);
 
 setDefaultCity("San Francisco");
+
+//Celsius to Fahrenheit conversion
+//showFahrenheitTemperature(event){
+
+//}
+
+//let fahrenheitLink = document.querySelector("#fahrenheit-link");
+//fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
