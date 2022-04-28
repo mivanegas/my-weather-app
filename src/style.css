@@ -28,13 +28,23 @@ h6 {
   text-align: right;
 }
 
+img {
+  bottom: 90px;
+  position: absolute;
+  right: 250px;
+  text-align: right;
+  margin: 0 auto;
+  display: block;
+  float: right;
+}
+
 footer {
   padding: 15px;
   text-align: center;
 }
 
-img {
-  margin: 0 auto;
+li {
+  list-style: none;
 }
 /* Current Location button */
 .btn-light-current {
