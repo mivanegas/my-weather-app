@@ -127,6 +127,11 @@ button:hover {
   text-decoration: none;
 }
 
+.active {
+  color: #e8630a;
+  cursor: default;
+}
+
 a:link {
   text-decoration: none;
 }

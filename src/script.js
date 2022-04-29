@@ -119,13 +119,20 @@ let celsiusTemp = null;
 //Celsius to Fahrenheit conversion
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  //Removing the active class from celsius link
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
   let tempElement = document.querySelector("#main-temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+  //Adding the active class from celsius link
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let tempElement = document.querySelector("#main-temperature");
   tempElement.innerHTML = celsiusTemp;
 }
