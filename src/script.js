@@ -115,9 +115,12 @@ searchForm.addEventListener("submit", searchCitySubmit);
 setDefaultCity("San Francisco");
 
 //Celsius to Fahrenheit conversion
-//showFahrenheitTemperature(event){
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (17 * 9) / 5 + 32;
+  let tempElement = document.querySelector("#main-temperature");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
 
-//}
-
-//let fahrenheitLink = document.querySelector("#fahrenheit-link");
-//fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
