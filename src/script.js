@@ -70,6 +70,8 @@ function showTemperature(response) {
   );
 
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemp = Math.round(response.data.main.temp);
 }
 //Setting default city
 function setDefaultCity(city) {
@@ -108,19 +110,31 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#your-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//Default city
+//Default city & global variables
 let searchForm = document.querySelector("#search-bar");
 searchForm.addEventListener("submit", searchCitySubmit);
 
-setDefaultCity("San Francisco");
+let celsiusTemp = null;
 
 //Celsius to Fahrenheit conversion
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemp = (17 * 9) / 5 + 32;
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let tempElement = document.querySelector("#main-temperature");
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#main-temperature");
+  tempElement.innerHTML = celsiusTemp;
+}
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+//Default City
+setDefaultCity("San Francisco");
