@@ -14,11 +14,7 @@
     />
     <!--HTML link to CSS-->
     <link rel="stylesheet" href="src/style.css" />
-    <!--FontAwesome Connector-->
-    <script
-      src="https://kit.fontawesome.com/457602dfdb.js"
-      crossorigin="anonymous"
-    ></script>
+
     <!--Axios-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
@@ -88,9 +84,10 @@
                   >
                 </li>
                 <img
-                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                  src="https://openweathermap.org/img/wn/04d@2x.png"
                   id="icon"
                   alt="weather icons"
+                  class="main-image"
                 />
               </div>
             </ul>
@@ -99,70 +96,96 @@
       </div>
 
       <!--today-weather-->
-
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tue</h5>
-              <i class="fa-solid fa-cloud-rain"></i>
-              <p class="card-text">13°F</p>
+      <div class="weather-forecast">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tue</h5>
+                <img
+                  src="https://openweathermap.org/img/wn/01d@2x.png"
+                  alt=""
+                  width="45"
+                  class="first"
+                />
+                <p class="card-text">13°F</p>
+              </div>
+              <!--card-body-->
             </div>
-            <!--card-body-->
+            <!--card--->
           </div>
-          <!--card--->
-        </div>
-        <!--col--->
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Wed</h5>
-              <i class="fa-solid fa-rainbow"></i>
-              <p class="card-text">16°F</p>
+          <!--col--->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wed</h5>
+                <img
+                  src="https://openweathermap.org/img/wn/01d@2x.png"
+                  alt=""
+                  width="45"
+                  class="second"
+                />
+                <p class="card-text">16°F</p>
+              </div>
+              <!--card-body-->
             </div>
-            <!--card-body-->
+            <!--card--->
           </div>
-          <!--card--->
-        </div>
-        <!--col--->
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Thu</h5>
-              <i class="fa-solid fa-cloud-moon-rain"></i>
-              <p class="card-text">45°F</p>
+          <!--col--->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Thu</h5>
+                <img
+                  src="https://openweathermap.org/img/wn/01d@2x.png"
+                  alt=""
+                  width="45"
+                  class="third"
+                />
+                <p class="card-text">45°F</p>
+              </div>
+              <!--card-body-->
             </div>
-            <!--card-body-->
+            <!--card--->
           </div>
-          <!--card--->
-        </div>
-        <!--col--->
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Fri</h5>
-              <i class="fa-solid fa-cloud-sun-rain"></i>
-              <p class="card-text">50°F</p>
+          <!--col--->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Fri</h5>
+                <img
+                  src="https://openweathermap.org/img/wn/01d@2x.png"
+                  alt=""
+                  width="45"
+                  class="fourth"
+                />
+                <p class="card-text">50°F</p>
+              </div>
+              <!--card-body-->
             </div>
-            <!--card-body-->
+            <!--card--->
           </div>
-          <!--card--->
-        </div>
-        <!--col--->
-        <div class="col">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Sat</h5>
-              <i class="fa-solid fa-snowflake"></i>
-              <p class="card-text">33°F</p>
+          <!--col--->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Sat</h5>
+                <img
+                  src="https://openweathermap.org/img/wn/01d@2x.png"
+                  alt=""
+                  width="45"
+                  class="fifth"
+                />
+                <p class="card-text">33°F</p>
+              </div>
+              <!--card-body-->
             </div>
-            <!--card-body-->
+            <!--card--->
           </div>
-          <!--card--->
+          <!--col--->
         </div>
-        <!--col--->
+        <!--row--->
       </div>
-      <!--row--->
       <hr />
       <footer>
         <em>

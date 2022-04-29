@@ -28,7 +28,7 @@ h6 {
   text-align: right;
 }
 
-img {
+img.main-image {
   bottom: 90px;
   position: absolute;
   right: 420px;
@@ -130,6 +130,10 @@ button:hover {
 .active {
   color: #e8630a;
   cursor: default;
+}
+
+.weather-forecast {
+  color: #2b4353;
 }
 
 a:link {
