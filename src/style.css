@@ -82,13 +82,13 @@ button:hover {
   text-align: center;
   padding: 5px 10px;
   margin: 18px;
-  font-size: 20px;
+  font-size: 18px;
   color: #2b4353;
 }
 /* Days of the week name -day */
 .card-title {
   color: #e8630a;
-  font-size: 21px;
+  font-size: 19px;
   padding-bottom: 4px;
 }
 /* Everything in body*/
