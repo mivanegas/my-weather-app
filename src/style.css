@@ -54,7 +54,7 @@ li {
   color: white;
   display: inline-block;
   font-size: 16px;
-  margin: 0 5px 0 2px;
+  margin: 0 2px;
   padding: 9px 5px;
   position: relative;
   transition: all 220ms ease-in-out;
