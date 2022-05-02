@@ -47,13 +47,14 @@ li {
   list-style: none;
 }
 /* Current Location button */
-.btn-light-current {
+.btn-light-search-current {
+  font-size: 15px;
   display: inline-block;
-  margin: 0 33px;
+  margin: 0 5px;
   position: relative;
   background-color: #2b4353;
   color: white;
-  padding: 5px 10px;
+  padding: 9px 22px;
   border: transparent;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   transition: all 220ms ease-in-out;
@@ -65,10 +66,10 @@ li {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   color: white;
   display: inline-block;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0 5px;
   margin-right: 0;
-  padding: 9px 13px;
+  padding: 9px 40px;
   position: relative;
   transition: all 220ms ease-in-out;
 }
@@ -80,8 +81,8 @@ button:hover {
 /* Days of the week cards -temp */
 .card {
   text-align: center;
-  padding: 5px 10px;
-  margin: 18px;
+  padding: 5px 9px;
+  margin: 15px;
   font-size: 18px;
   color: #2b4353;
 }
