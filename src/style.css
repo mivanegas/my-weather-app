@@ -77,18 +77,18 @@ button:hover {
   cursor: pointer;
   opacity: 0.88;
 }
-/* Days of the week cards */
+/* Days of the week cards -temp */
 .card {
   text-align: center;
   padding: 5px 10px;
   margin: 18px;
-  font-size: 22px;
+  font-size: 20px;
   color: #2b4353;
 }
-/* Days of the week name*/
+/* Days of the week name -day */
 .card-title {
   color: #e8630a;
-  font-size: 24px;
+  font-size: 21px;
   padding-bottom: 4px;
 }
 /* Everything in body*/
