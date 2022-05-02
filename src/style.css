@@ -48,15 +48,15 @@ li {
 }
 /* Current Location button */
 .btn-light-search-current {
-  font-size: 15px;
-  display: inline-block;
-  margin: 0 5px;
-  position: relative;
   background-color: #2b4353;
-  color: white;
-  padding: 9px 22px;
   border: transparent;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px 0 2px;
+  padding: 9px 5px;
+  position: relative;
   transition: all 220ms ease-in-out;
 }
 /* Search button */
@@ -106,7 +106,7 @@ button:hover {
 /* Bar where you search city */
 .form-group {
   display: block;
-  margin-left: 0;
+  margin-left: 100px;
   position: relative;
   top: 6px;
 }
