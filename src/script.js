@@ -68,7 +68,6 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemp = Math.round(response.data.main.temp);
@@ -147,13 +146,14 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `
-    <div class="col-3">
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="col-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Tue</h5>
+          <h5 class="card-title">${day}</h5>
           <img
              src="https://openweathermap.org/img/wn/01d@2x.png"
               alt=""
@@ -164,9 +164,9 @@ function displayForecast() {
           </div>
        </div>
     </div>
-    </div>
    `;
-  forecastHTML = `</div`;
+  });
+  forecastHTML = forecastHTML + `</div`;
   forecastElement.innerHTML = forecastHTML;
 }
 displayForecast();
