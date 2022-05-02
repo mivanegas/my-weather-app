@@ -43,6 +43,13 @@ function formatDate(date) {
 let dayTime = document.querySelector("#day-time");
 dayTime.innerHTML = formatDate(now);
 
+//Pulling in Forecast API
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "89580641dc83acaa98e3dfb8c0563516";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 //Changing weather details with city searched
 function showTemperature(response) {
   document.querySelector("#city-header").innerHTML = response.data.name;
@@ -71,6 +78,8 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemp = Math.round(response.data.main.temp);
+
+  getForecast(response.data.coord);
 }
 //Setting default city
 function setDefaultCity(city) {
@@ -142,11 +151,14 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 //Displaying the weather forecast
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -160,7 +172,7 @@ function displayForecast() {
               width="43"
               class="first"
             />
-          <p class="card-text">14°F</p>
+          <p class="card-text">14°C</p>
           </div>
        </div>
     </div>
@@ -169,6 +181,5 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
 //Default City
 setDefaultCity("San Francisco");
