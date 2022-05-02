@@ -99,8 +99,8 @@ button:hover {
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
   height: 180%;
   max-width: 93%;
-  padding-top: 25px;
-  padding-bottom: 220px;
+  padding-top: 30px;
+  padding-bottom: 70px;
 }
 /* Bar where you search city */
 .form-group {
