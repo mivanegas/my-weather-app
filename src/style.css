@@ -1,6 +1,5 @@
 body {
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  background-size: cover;
+  background: #e6f1f7;
 }
 /* New York */
 h4 {
@@ -94,8 +93,12 @@ button:hover {
 }
 /* Everything in body*/
 .container {
-  height: 100%;
-  max-width: 1100px;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  border-style: hidden;
+  border-radius: 30px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  height: 180%;
+  max-width: 93%;
   padding-top: 25px;
   padding-bottom: 220px;
 }
