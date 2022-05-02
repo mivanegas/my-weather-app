@@ -142,6 +142,33 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+//Displaying the weather forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
 
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+    <div class="col-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Tue</h5>
+          <img
+             src="https://openweathermap.org/img/wn/01d@2x.png"
+              alt=""
+              width="43"
+              class="first"
+            />
+          <p class="card-text">14°F</p>
+          </div>
+       </div>
+    </div>
+    </div>
+   `;
+  forecastHTML = `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
 //Default City
 setDefaultCity("San Francisco");

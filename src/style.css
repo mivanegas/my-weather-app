@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background-size: cover;
 }
 /* New York */
 h4 {
